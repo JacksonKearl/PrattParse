@@ -1,0 +1,4 @@
+{
+  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "rules": { "max-classes-per-file": false, "no-shadowed-variable": false, "interface-name": false }
+}

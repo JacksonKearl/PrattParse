@@ -1,0 +1,51 @@
+{
+  "name": "pratt",
+  "version": "0.1.0",
+  "description": "Pratt parser builder (along with simple tokenizer)",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "format": "tslint -p tsconfig.json && prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JacksonKearl/PrattParse.git"
+  },
+  "keywords": [
+    "pratt",
+    "parser"
+  ],
+  "files": [
+    "build/**/*"
+  ],
+  "author": "Jackson Kearl <jackson.kearl@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JacksonKearl/PrattParse/issues"
+  },
+  "homepage": "https://github.com/JacksonKearl/PrattParse#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "jest": "^24.8.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.18.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.5.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testMatch": [
+      "**/?(*.)+(spec|test).ts?(x)"
+    ]
+  }
+}
