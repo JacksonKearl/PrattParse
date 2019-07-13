@@ -9,8 +9,7 @@
     "build": "tsc",
     "format": "tslint -p tsconfig.json && prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run format && npm test",
-    "version": "npm run format && git add -A",
+    "version": "npm run format && npm test && git add -A",
     "postversion": "git push && git push --tags"
   },
   "repository": {
