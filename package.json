@@ -1,6 +1,6 @@
 {
   "name": "@jkearl/pratt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Pratt parser builder (along with simple tokenizer)",
   "main": "build/index.js",
   "types": "build/index.d.ts",
