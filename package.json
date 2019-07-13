@@ -1,5 +1,5 @@
 {
-  "name": "pratt",
+  "name": "@jkearl/pratt",
   "version": "0.1.0",
   "description": "Pratt parser builder (along with simple tokenizer)",
   "main": "build/index.js",
