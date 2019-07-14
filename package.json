@@ -8,6 +8,7 @@
     "test": "jest",
     "build": "tsc",
     "format": "tslint -p tsconfig.json && prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "check-format": "tslint -p tsconfig.json && prettier --check \"src/**/*.ts\" \"src/**/*.js\"",
     "prepare": "npm run build",
     "version": "npm run format && npm test && git add -A",
     "postversion": "git push && git push --tags"
