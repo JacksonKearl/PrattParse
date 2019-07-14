@@ -71,9 +71,9 @@ export interface Token {
 
 Where `id` is the unique identifier of the token's category, and `value` is the matched text (used only in error messages).
 
-#### `constructor(config)`
+#### `constructor(matchers)`
 
-The constructor accepts a list of token matchers, in decreasing order of precedence. This means of you want to accept both `===`, `==`, and `=` as tokens in your language, they must be listed in that order. (But who would be crazy enough to do that?)
+The constructor accepts a list of token matchers, in decreasing order of precedence. This means of you want to accept both `===`, `==`, and `=` as tokens in your language, they must be listed in that order. (But who would be crazy enough to want that in their language?)
 
 The token matchers may be of type:
 
@@ -99,7 +99,7 @@ The `id` and `pattern` as as above, and `value` is the matched text, helpful in 
 
 ### `ParserBuilder<E, T>`
 
-The `ParserBuilder` class is meant to help with registering parselets for the parser's inner logic. The `Parser` itself is not currently exposed, so as to reduce backwards compatibility footprint, but that may change in the future if needed.
+The `ParserBuilder` class is meant to help with registering parselets for the parser's inner logic.
 
 `E` is the type of the AST nodes you will be generating, and `T` is the type of the tokens you will be consuming. If you are using the provided `Tokenizer`, this is `TokenMatchResult`.
 
@@ -120,7 +120,7 @@ The constructor takes a single argument, the tokenizer. It must be a function fr
 
 #### `construct`
 
-After all operations have been registered, simply call `construct` to receive a function of type `string -> E`.
+After all operations have been registered, simply call `construct()` to receive a function of type `string -> E`.
 
 #### High Level API
 
