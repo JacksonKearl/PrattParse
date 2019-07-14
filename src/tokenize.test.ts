@@ -87,4 +87,8 @@ describe("Tokenizer", () => {
       ]
     `)
   })
+
+  it("fails demo test to verify CircleCI is working", () => {
+    expect(false).toBeTruthy()
+  })
 })
