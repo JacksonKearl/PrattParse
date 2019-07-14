@@ -7,7 +7,7 @@
 Inspired by [Pratt Parsers: Expression Parsing Made Easy](http://journal.stuffwithstuff.com/2011/03/19/pratt-parsers-expression-parsing-made-easy/).
 
 The goal of this package is to make getting started with a computer language project in
-TypeScript as simple as possible. It includes
+TypeScript as simple as possible. It includes:
 
 1. A Pratt-style parser builder, located in [`src/parse.ts`](src/parse.ts)
 2. A bare-bones tokenizer, located in [`src/tokenize.ts`](src/tokenize.ts)
