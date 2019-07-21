@@ -39,6 +39,9 @@ export class Tokenizer {
   }
 
   public tokenize(str: string): TokenMatchResult[] {
+    // Double-execing the RegExp is actually not that slow. Faster than my attempted alternative implementation.
+    // https://jsperf.com/tokenization-strategies-jkearl-pratt/1
+
     const tokens = str.match(this.matchAll)
     if (!tokens) {
       throw new Error("Could not tokenize")

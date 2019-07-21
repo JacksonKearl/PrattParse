@@ -10,7 +10,7 @@ The goal of this package is to make getting started with a computer language pro
 TypeScript as simple as possible. It includes:
 
 1. A Pratt-style parser builder, located in [`src/parse.ts`](src/parse.ts)
-2. A bare-bones tokenizer, located in [`src/tokenize.ts`](src/tokenize.ts)
+2. A simple and possibly inefficient tokenizer, located in [`src/tokenize.ts`](src/tokenize.ts)
 
 Use as follows (located in [`src/calculator.demo.ts`](src/calculator.demo.ts)):
 
