@@ -12,6 +12,11 @@ TypeScript as simple as possible. It includes:
 1. A Pratt-style parser builder, located in [`src/parse.ts`](src/parse.ts)
 2. A simple and possibly inefficient tokenizer, located in [`src/tokenize.ts`](src/tokenize.ts)
 
+Install as follows:
+```bash
+npm i @jkearl/pratt
+```
+
 Use as follows (located in [`src/calculator.demo.ts`](src/calculator.demo.ts)):
 
 ```ts

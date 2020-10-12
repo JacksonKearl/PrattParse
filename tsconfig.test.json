@@ -1,9 +1,9 @@
 {
 	"extends": "./tsconfig.base.json",
 	"compilerOptions": {
-		"noEmit": false
+		"noEmit": true,
 	},
-	"exclude": [
-		"**/*.test.ts",
+	"include": [
+		"**/*.test.ts"
 	]
 }

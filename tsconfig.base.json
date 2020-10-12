@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "strict": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "removeComments": false,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "outDir": "out",
+    "lib": [
+      "es2020"
+    ]
+  }
+}

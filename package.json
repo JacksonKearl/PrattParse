@@ -7,8 +7,6 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "format": "tslint -p tsconfig.json && prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "check-format": "tslint -p tsconfig.json && prettier --check \"src/**/*.ts\" \"src/**/*.js\"",
     "prepare": "npm run build",
     "version": "npm run format && npm test && git add -A",
     "postversion": "git push && git push --tags"
@@ -31,20 +29,17 @@
   },
   "homepage": "https://github.com/JacksonKearl/PrattParse#readme",
   "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "jest": "^24.8.0",
-    "prettier": "^1.18.2",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.18.0",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.5.3"
-  },
-  "jest": {
-    "transform": {
-      "^.+\\.tsx?$": "ts-jest"
-    },
-    "testMatch": [
-      "**/?(*.)+(spec|test).ts?(x)"
-    ]
+    "@types/chai": "^4.2.13",
+    "@types/mocha": "^8.0.3",
+    "@types/node": "^14.11.8",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "@typescript-eslint/parser": "^4.4.1",
+    "chai": "^4.2.0",
+    "eslint": "^7.11.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "mocha": "^8.1.3",
+    "prettier": "^1.19.1",
+    "typescript": "^3.9.7"
   }
 }
