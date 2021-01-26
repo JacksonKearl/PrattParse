@@ -22,6 +22,8 @@ npm run build
 
 To run the tests:
 ```bash
+
+change
 npm run test
 ```
 
@@ -302,7 +304,7 @@ const doURLMatch = (
 	if (urlOffset === url.length) {
 		return trustedURLOffset === trustedURL.length;
   }
-  
+
   // Some path remaining in url
   if (trustedURLOffset === trustedURL.length) {
     // const consumed = url.slice(0, urlOffset)
@@ -409,7 +411,7 @@ const start = `
 					</ul>
 				</div>
 			</div>
-		</div>	
+		</div>
     </div>
 </div>
 `
