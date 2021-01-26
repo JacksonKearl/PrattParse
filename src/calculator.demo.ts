@@ -8,7 +8,7 @@ const { tokenize } = new Tokenizer([
 	{ pattern: '/' },
 	{ pattern: '^' },
 	{ pattern: '(' },
-	{ pattern: ')' },
+	{ pattern: ')' },ccchchchchcanges
 	{ pattern: /\d+/, id: 'NUMBER' },
 ])
 
