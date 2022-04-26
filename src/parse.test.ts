@@ -1,28 +1,7 @@
 import { PARENTHESES_PARSELET, ParserBuilder } from './parse'
 import { Tokenizer, TokenMatchResult } from './tokenize'
 import { expect } from 'chai'
-
-const { tokenize } = new Tokenizer([
-	{ pattern: '+' },
-	{ pattern: '-' },
-	{ pattern: '*' },
-	{ pattern: '/' },
-	{ pattern: '^' },
-	{ pattern: '(' },
-	{ pattern: ')' },
-	{ pattern: '!' },
-	{ pattern: /\d+/, id: 'NUMBER' },
-])
-
-const enum Precedence {
-	AddSub = 1,
-	MulDiv = 2,
-	Exp = 3,
-	Negate = 4,
-}
-
-describe('ParserBuilder', () => {
-	it('can build a arithmetic parser with correct order of operations', () => {
+order of operations', () => {
 		const parse = new ParserBuilder<number, TokenMatchResult>(tokenize)
 			.registerPrefix('NUMBER', { parse: (_, token) => +token.value })
 			.infixRight('^', Precedence.Exp, (left, _, right) => left ** right)
@@ -30,7 +9,11 @@ describe('ParserBuilder', () => {
 			.infixLeft('*', Precedence.MulDiv, (left, _, right) => left * right)
 			.infixLeft('+', Precedence.AddSub, (left, _, right) => left + right)
 			.infixLeft('-', Precedence.AddSub, (left, _, right) => left - right)
-			.construct()
+			.construct()\
+
+
+
+			
 
 		const result = parse('3 / 3 + 4 * 3 ^ 2 - 1')
 		expect(result).equals(36)
