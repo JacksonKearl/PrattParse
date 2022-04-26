@@ -9,7 +9,11 @@ order of operations', () => {
 			.infixLeft('*', Precedence.MulDiv, (left, _, right) => left * right)
 			.infixLeft('+', Precedence.AddSub, (left, _, right) => left + right)
 			.infixLeft('-', Precedence.AddSub, (left, _, right) => left - right)
-			.construct()
+			.construct()\
+
+
+
+			
 
 		const result = parse('3 / 3 + 4 * 3 ^ 2 - 1')
 		expect(result).equals(36)
