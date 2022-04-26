@@ -11,8 +11,6 @@ const { tokenize } = new Tokenizer([
 	{ pattern: ')' },
 	{ pattern: /\d+/, id: 'NUMBER' },
 ])
-
-const enum Precedence {
 	AddSub = 1,
 	MulDiv = 2,
 	Exp = 3,
